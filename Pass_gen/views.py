@@ -3,9 +3,9 @@ from .forms import PasswordForm
 from .generator import generate_password
 from .models import Password
 
-def index(request):
-    # Home Page
-    return render(request, 'Pass_gen/home_page.html')
+# def index(request):
+#     # Home Page
+#     return render(request, 'Pass_gen/home_page.html')
 
 
 def password_view(request):

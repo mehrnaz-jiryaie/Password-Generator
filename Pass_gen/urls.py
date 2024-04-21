@@ -6,5 +6,4 @@ app_name = 'Pass_gen'
 
 urlpatterns = [
     path('generate/', views.password_view, name='password'),
-    # path('generate/', views.password_view, name='password'),
 ]

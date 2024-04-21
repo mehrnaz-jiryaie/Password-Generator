@@ -5,6 +5,6 @@ from . import views
 app_name = 'Pass_gen'
 
 urlpatterns = [
-    path('', views.index, name='index'),
-    path('generate/', views.password_view, name='password'),
+    path('', views.password_view, name='password'),
+    # path('generate/', views.password_view, name='password'),
 ]

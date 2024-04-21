@@ -1,5 +1,4 @@
 from django.db import models
-# from validator import UnsignedNonZeroIntegerField
 
 class Password(models.Model):
     # A password that user creates

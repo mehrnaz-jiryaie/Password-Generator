@@ -1,3 +1,4 @@
+#Password Generator Read.me
 This repository is a simple project for those who are new to Django. In this project, CSS and HTML are used briefly for the visual beauty of the project.
 Here is a shot of the project :
 

@@ -9,7 +9,7 @@ def index(request):
 
 
 def password_view(request):
-    password = None
+    password = ''
     if request.method == 'POST':
         form = PasswordForm(data=request.POST)
         if form.is_valid():
@@ -18,6 +18,16 @@ def password_view(request):
     else:
         form = PasswordForm()
         # Generate password for initial rendering of the form
-        password_length = form.fields['password_length']
-        password = generate_password(password_length)
+        # password_length = form.fields['password_length']
+        try:
+            last_password = Password.objects.latest('id')
+            # id = last_password.id
+            # password = Password.objects.get(id=id)
+            password_length = last_password.password_length
+            password = generate_password(password_length)
+        # Do something with the ID
+        except Password.DoesNotExist:
+    # Handle the case where there are no objects in the database
+            id = None 
+        
     return render(request, 'Pass_gen/password.html', {'form': form, 'password': password})

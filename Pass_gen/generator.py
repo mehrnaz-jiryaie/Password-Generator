@@ -1,6 +1,6 @@
 from random import sample
 
-# Combined Uppercase and Lowercase Alphabet
+# Combined Uppercase and Lowercase Alphabet and numbers 0 to 9
 characters = [chr(i) for i in range(ord('A'), ord('Z') + 1)] + [chr(i) for i in range(ord('a'), ord('z') + 1)] + [i for i in range(0,10)]
 
 def generate_password(k):
